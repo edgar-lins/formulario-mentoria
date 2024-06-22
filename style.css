@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Poppins', sans-serif;
+}
+
+header::before {
+    content: '';
+    width: 100%;
+    height: 465px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #293241;
+}
+
+body {
+    background: #BFD7E4;
+}
+
+.page {
+    margin: 107px auto;
+    width: 750px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+header p {
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.header-form {
+    color: #FFFFFF;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    line-height: 34px; 
+
+    border-radius: 20px 20px 0px 0px;
+    background: #F67669;
+
+    width: 750px;
+    margin-top: 30px;
+    padding: 50px 275px;
+}
+
+#my-form {
+    min-height: 300px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 20px 20px;
+
+    padding: 30px 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+fieldset {
+    border: none;
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    font-size: 14px;
+    line-height: 24px;
+
+    margin-bottom: 8px;
+
+    color: #4E4958;
+}
+
+.input-wrapper label span {
+    margin-left: 10px;
+
+    font-size: 12px;
+    line-height: 20px;  
+
+    color: #C1BCCC;  
+}
+
+.input-wrapper label span:hover {
+    color: #77747E;
+}
+
+.col-2 {
+    display: flex;
+    gap: 22px;
+}
+
+.col-2 > div:nth-child(1) {
+    width: 50%;
+}
+
+.col-2 > div:nth-child(2) {
+    width: 50%;
+}
+
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    background: #FAFAFC;
+
+    height: 55px;
+    padding: 0 24px;
+
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #6C6A71;
+}
+
+fieldset legend {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    line-height: 34px; 
+
+    color: #253B51;
+
+    width: 100%;
+    border-bottom: 1px solid #E6E6F0;
+
+    padding-bottom: 8px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.input-wrapper textarea {
+    height: 167px;
+    padding: 24px;
+}
+
+#text-feedback,
+#mentor {
+    margin-top: 15px;
+}
+
+#feedback {
+    margin-bottom: 31px;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+
+    color: #4E4958;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 24px; 
+}
+
+.checkbox-wrapper input  {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+
+    opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='24' height='24' rx='8' fill='%23FAFAFC' stroke='%23E6E6F0'/%3E%3Cg clip-path='url(%23clip0_2902_21)'%3E%3Cpath d='M10 17.17L5.83 13L4.41 14.41L10 20L22 8L20.59 6.59L10 17.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2902_21'%3E%3Crect width='24' height='24' fill='white' transform='translate(1 1)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black;
+}
+
+.col-3 {
+    display: flex;
+    gap: 22px;
+
+    margin-top: 15px;
+}
+
+.col-3 > div:nth-child(1) {
+    width: 100%;
+}
+
+.button {
+    color: #FFF;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+
+    border-radius: 8px;
+    background: #F67669;
+
+    width: 622px;
+    padding: 15px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #f15d4d;
+}
+
+input:invalid {
+    border: 1px solid #FF1010;
+}
